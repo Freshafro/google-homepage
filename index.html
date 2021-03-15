@@ -23,11 +23,6 @@
             text-align: center;
         }
 
-        img {
-            /*position: relative;
-            left: 20px;*/
-        }
-
         input {
             width: 100%;
             height: 40px;
@@ -45,14 +40,17 @@
 
         a {
             text-decoration: none;
+        }
+
+        #topNav li a {
             color: black;
         }
 
-        a:hover {
+        li a:hover {
             text-decoration: underline;
         }
         
-        #gmail, #images, #sign_in {
+        #gmail, #images, #sign_in, #privacy, #terms, #settings {
             float: right;
         }
         
@@ -60,7 +58,7 @@
             margin: 20px;
         }
 
-        button {
+        button#signIn {
             padding: 5px 20px 5px 20px;
             background-color: rgb(26, 115, 232);
             color: white;
@@ -74,10 +72,43 @@
         #sign_in {
             margin-top: -5px;
         }
+
+        #searchButtons {
+            margin: 20px;
+        }
+
+        #search, #lucky {
+            padding: 5px 15px 5px 15px;
+        }
+
+        #search {
+            margin-right: 10px;
+        }
+
+        #lucky {
+            margin-left: 10px;
+        }
+
+        p {
+            font-size: 12px;
+            margin: 20px;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            height: 50px;
+            width: 100%;
+            background-color: #dadce0;
+        }
+
+        #bottomNav li a{
+            color: grey;
+        }
     </style>
 </head>
 <body>
-    <nav>
+    <nav id="topNav">
         <ul>
             <li id="about"><a href="#">About</a></li>
             <li id="store"><a href="#">Store</a></li>
@@ -97,7 +128,28 @@
         <form id="seachForm" action="">
             <label for="search"></label>
             <input type="text" id="search" name="search">
-        </form> 
+        </form>
+        <div id="searchButtons">
+            <label for="search">
+                <button type="submit" id="search">Google Search</button>
+            </label>
+            <label for="lucky">
+                <button type="submit" id="lucky">I'm feeling lucky</button>
+            </label>
+            <p>Google offered in: <a href="#">German</a></p>
+        </div>
     </div>
 </body>
+<footer>
+    <nav id="bottomNav">
+        <ul>
+            <li id="advertising"><a href="#">Advertising</a></li>
+            <li id="business"><a href="#">Business</a></li>
+            <li id="howSearch"><a href="#">How Search Works</a></li>
+            <li id="settings"><a href="#">Settings</a></li>
+            <li id="terms"><a href="#">Terms</a></li>
+            <li id="privacy"><a href="#">Privacy</a></li>
+        </ul>
+    </nav>
+</footer>
 </html>
